@@ -17,8 +17,6 @@ class Sequence
      */
     public function check_sequence($array, $x, $size, $count = 0, $index = 0)
     {
-
-
         if ($count == $x) {
             return true;
         }
