@@ -30,15 +30,8 @@ class Sequence
      */
     public function check_sequence($array, $x, $size, $count = 0, $index = 0)
     {
-        if (!isset($array[$index]) || !is_numeric($array[$index])) {
-            throw new Exception("All elements must be integers!");
-        }
-        if (empty($array)) {
-            throw new Exception("Array can't be empty!");
-        }
-        if (!is_array($array)) {
-            throw new Exception("$ Array Must be an Array!");
-        }
+        $this->validateArray($array, $index);
+
         if ($count + 1 == $x) {
             return true;
         }
@@ -54,5 +47,18 @@ class Sequence
             echo json_encode($array) . ", $x, " . ($size - 1) . ", $count, " . ($index + 1) . "\n";
         }
         return $this->check_sequence($array, $x, $size - 1, $count, $index + 1);
+    }
+
+    private function validateArray($array, $index)
+    {
+        if (!isset($array[$index]) || !is_numeric($array[$index])) {
+            throw new Exception("All elements must be integers!");
+        }
+        if (empty($array)) {
+            throw new Exception("Array can't be empty!");
+        }
+        if (!is_array($array)) {
+            throw new Exception("$ Array Must be an Array!");
+        }
     }
 }
