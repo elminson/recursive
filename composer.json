@@ -1,13 +1,25 @@
 {
-    "name": "elminson/recursive",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Elminson De Oleo Baez",
-            "email": "edeoleo@gmail.com"
-        }
-    ],
-    "require": {
-        "phpunit/phpunit": "^7.3"
+  "name": "elminson/recursive",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Elminson De Oleo Baez",
+      "email": "edeoleo@gmail.com"
     }
+  ],
+  "require": {
+    "phpunit/phpunit": "^7"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Recursive\\": "src/"
+    },
+    "classmap": [
+      "src/"
+    ]
+  }
+
 }
