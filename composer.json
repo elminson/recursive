@@ -1,0 +1,13 @@
+{
+    "name": "elminson/recursive",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Elminson De Oleo Baez",
+            "email": "edeoleo@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^7.3"
+    }
+}
