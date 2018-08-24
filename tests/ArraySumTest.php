@@ -2,14 +2,13 @@
 /**
  * User: Elminson De Oleo Baez
  * Date: 8/22/2018
- * Time: 10:57 PM
+ * Time: 10:57 PM.
  */
 
 namespace Recursive;
 
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 
-use PHPUnit\Exception;
 use PHPUnit\Framework\TestCase;
 
 class ArraySumTest extends TestCase

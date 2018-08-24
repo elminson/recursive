@@ -2,12 +2,12 @@
 /**
  * User: Elminson De Oleo Baez
  * Date: 8/22/2018
- * Time: 10:57 PM
+ * Time: 10:57 PM.
  */
 
 namespace Recursive;
 
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 
 use PHPUnit\Exception;
 use PHPUnit\Framework\TestCase;
@@ -53,7 +53,7 @@ class SequenceTest extends TestCase
     public function testExceptionNullSequence()
     {
         $sequence = new Sequence();
-        $array = [""];
+        $array = [''];
         $this->expectException(Exception::class, "Array can't be empty!");
         $sequence->check_sequence($array, 3, count($array) - 1);
     }
@@ -61,8 +61,8 @@ class SequenceTest extends TestCase
     public function testExceptionNotNumericSequence()
     {
         $sequence = new Sequence();
-        $array = ["a", 2, 3, "a"];
-        $this->expectException(Exception::class, "All elements must be integers!");
+        $array = ['a', 2, 3, 'a'];
+        $this->expectException(Exception::class, 'All elements must be integers!');
         $sequence->check_sequence($array, 3, count($array) - 1);
     }
 }
