@@ -44,11 +44,41 @@ class Sequence
             unset($array[$index]);
         }
         if ($this->debug) {
-            echo json_encode($array) . ", $x, " . ($size - 1) . ", $count, " . ($index + 1) . "\n";
+            echo 'Array => ' . json_encode($array) . ', x => ' . $x . ', size => ' . ($size - 1) . ', cu t =>  ' . $count . ' ' . ($index + 1) . "\n";
         }
         return $this->check_sequence($array, $x, $size - 1, $count, $index + 1);
     }
 
+
+    /**
+     * @param $array
+     * @param $x
+     * @param $size
+     * @param int $count
+     * @param int $index
+     * @return bool
+     */
+    public function check_sequence_v2($array, $x, $size, $count = 0, $index = 0)
+    {
+        $this->validateArray($array, $index);
+        if ($count == $x) {
+            return true;
+        }
+        if ($index > $size || !isset($array[$index + 1])) {
+            return false;
+        }
+        if ($array[$index] == $array[$index + 1] - 1) {
+            $count++;
+        }
+
+        return $this->check_sequence_v2($array, $x, $size, $count, $index + 1);
+
+    }
+
+    /**
+     * @param $array
+     * @param $index
+     */
     private function validateArray($array, $index)
     {
         if (!isset($array[$index]) || !is_numeric($array[$index])) {
@@ -61,4 +91,5 @@ class Sequence
             throw new Exception("$ Array Must be an Array!");
         }
     }
+
 }
