@@ -23,4 +23,15 @@ class ReduceByOneTest extends TestCase
         $this->assertEquals(5, $reduce->reduce(15));
         $this->assertEquals(9, $reduce->reduce(200));
     }
+
+    /**
+     * @throws Exception
+     */
+    public function testExceptionReduce()
+    {
+        $this->expectException(Exception::class, "A non-numeric value encountered");
+        $reduce = new ReduceByOne();
+        $this->assertEquals(9, $reduce->reduce("a"));
+
+    }
 }

@@ -1,4 +1,7 @@
+
 # Recursive
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/elminson/recursive/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/elminson/recursive/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/elminson/recursive/badges/build.png?b=master)](https://scrutinizer-ci.com/g/elminson/recursive/build-status/master) [![Code Intelligence Status](https://scrutinizer-ci.com/g/elminson/recursive/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence) [![StyleCI](https://github.styleci.io/repos/145788360/shield?branch=master)](https://github.styleci.io/repos/145788360)
+
 Problems solved with recursion
 
 # Sequence Class

@@ -2,7 +2,7 @@
 /**
  * User: Elminson De Oleo Baez
  * Date: 8/22/2018
- * Time: 10:36 PM
+ * Time: 10:36 PM.
  */
 
 namespace Recursive;
@@ -26,6 +26,7 @@ class Sequence
      * @param $size
      * @param int $count
      * @param int $index
+     *
      * @return bool
      */
     public function check_sequence($array, $x, $size, $count = 0, $index = 0)
@@ -44,8 +45,9 @@ class Sequence
             unset($array[$index]);
         }
         if ($this->debug) {
-            echo 'Array => ' . json_encode($array) . ', x => ' . $x . ', size => ' . ($size - 1) . ', cu t =>  ' . $count . ' ' . ($index + 1) . "\n";
+            echo json_encode($array) . ", $x, " . ($size - 1) . ", $count, " . ($index + 1) . "\n";
         }
+
         return $this->check_sequence($array, $x, $size - 1, $count, $index + 1);
     }
 
@@ -82,14 +84,13 @@ class Sequence
     private function validateArray($array, $index)
     {
         if (!isset($array[$index]) || !is_numeric($array[$index])) {
-            throw new Exception("All elements must be integers!");
+            throw new Exception('All elements must be integers!');
         }
         if (empty($array)) {
             throw new Exception("Array can't be empty!");
         }
         if (!is_array($array)) {
-            throw new Exception("$ Array Must be an Array!");
+            throw new Exception('$ Array Must be an Array!');
         }
     }
-
 }
