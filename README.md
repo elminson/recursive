@@ -17,7 +17,7 @@ $x = 2;
 return false
 ```
 
-###Reduce a number to 1 by performing given operations
+### Reduce a number to 1 by performing given operations
 ```
 https://www.geeksforgeeks.org/reduce-a-number-to-1-by-performing-given-operations/
 ```
